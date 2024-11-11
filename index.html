@@ -7,6 +7,7 @@
     <style>
         body {
             display: flex;
+            flex-direction: column; /* Чтобы элементы располагались вертикально */
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -16,9 +17,14 @@
         #timer {
             font-size: 48px;
         }
+        #header {
+            font-size: 24px;
+            margin-bottom: 20px; /* Отступ от текста до таймера */
+        }
     </style>
 </head>
 <body>
+    <div id="header">До ЕГЭ по профильной математике 2025 осталось:</div> <!-- Текст над таймером -->
     <div id="timer">Загрузка...</div>
     <script>
         // Установка конечной даты
