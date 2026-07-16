@@ -17,7 +17,7 @@
 
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
 
             padding: 30px 20px;
@@ -29,7 +29,7 @@
         }
 
         #header {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-size: 28px;
             font-weight: bold;
         }
@@ -40,31 +40,39 @@
         }
 
         #photo {
-            width: 500px;
+            display: block;
+
+            width: auto;
+            height: 55vh;
             max-width: 90%;
-            max-height: 450px;
+            max-height: 650px;
 
-            margin-top: 40px;
+            margin-top: 15px;
 
-            object-fit: cover;
+            object-fit: contain;
+            object-position: top center;
 
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
         }
 
-        /* Адаптация для телефонов */
         @media (max-width: 600px) {
+            body {
+                padding-top: 20px;
+            }
+
             #header {
-                font-size: 22px;
+                font-size: 21px;
             }
 
             #timer {
-                font-size: 32px;
-                line-height: 1.4;
+                font-size: 30px;
+                line-height: 1.35;
             }
 
             #photo {
-                margin-top: 30px;
+                height: 58vh;
+                max-width: 100%;
+                margin-top: 12px;
             }
         }
     </style>
@@ -80,15 +88,13 @@
         Загрузка...
     </div>
 
-    <!-- Картинка под таймером -->
     <img
         id="photo"
-        src="100points_ 196.jpg"
-        alt="Легион Ильича"
+        src="ilich.jpg"
+        alt="Напуганный Ильич"
     >
 
     <script>
-        // 8 июня 2027 года, 10:00 по московскому времени
         const endDate = new Date("2027-06-08T10:00:00+03:00");
 
         function updateTimer() {
@@ -135,7 +141,6 @@
 
 </body>
 </html>
-
 
 
 
